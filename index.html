@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Tags -->
+    <meta name="description" content="Sky Soft شركة متخصصة في تطوير الأنظمة المحاسبية والإدارية وحلول ERP وCRM ونقاط البيع، لمساعدة الشركات على إدارة أعمالها بكفاءة.">
+    <meta name="keywords" content="Sky Soft, برامج محاسبة, ERP, CRM, POS, برامج شركات, حلول برمجية, برامج إدارية">
+    <meta name="author" content="Sky Soft">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b6ecf">
+    <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="https://engroaa.github.io/skysoft-ERP/">
+
+    <meta property="og:title" content="Sky Soft | حلول برمجية ذكية لتنمية أعمالك">
+    <meta property="og:description" content="شريكك التقني نحو النجاح الرقمي.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://engroaa.github.io/skysoft-ERP/images/og-image.jpg">
+    <meta property="og:url" content="https://engroaa.github.io/skysoft-ERP/">
+    <meta property="og:locale" content="ar_EG">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="preload" href="images/hero.jpg" as="image">
+    <link rel="preload" href="favicon.ico" as="image">
+
+    <title>Sky Soft | حلول برمجية ذكية لتنمية أعمالك</title>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareCompany",
+      "name": "Sky Soft",
+      "url": "https://engroaa.github.io/skysoft-ERP/",
+      "logo": "https://engroaa.github.io/skysoft-ERP/images/logo.jpg",
+      "image": "https://engroaa.github.io/skysoft-ERP/images/og-image.jpg",
+      "description": "Sky Soft شركة متخصصة في تطوير الأنظمة المحاسبية والإدارية وحلول ERP وCRM ونقاط البيع.",
+      "telephone": "+201551888205",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "القاهرة",
+        "addressRegion": "وسط البلد - التحرير",
+        "addressCountry": "EG"
+      },
+      "sameAs": []
+    }
+    </script>
+</head>
+
+<body>
+
+<!-- ============================================ -->
+<!-- 1. LOADER - نسخة محدثة -->
+<!-- ============================================ -->
+<div id="loader">
+    <div class="loader-container">
+        <div class="loader-logo">
+            <img src="images/logo-icon.png" alt="Sky Soft">
+        </div>
+        <h2 class="loader-title">Sky Soft</h2>
+        <div class="loader-bar-wrapper">
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+        <p class="loader-text">جاري التحميل...</p>
+    </div>
+</div>
+<!-- ============================================ -->
+<!-- 2. PROGRESS BAR -->
+<!-- ============================================ -->
+<div id="progress-bar"></div>
+
+<!-- ============================================ -->
+<!-- 3. SKY ASSISTANT (البوت التفاعلي) -->
+<!-- ============================================ -->
+<div class="sky-assistant">
+    <button class="assistant-btn" id="assistantBtn">
+        <i class="fa-solid fa-headset"></i>
+    </button>
+</div>
+
+<div class="assistant-popup" id="assistantPopup">
+    <div class="assistant-header">
+        <h3>🤖 Sky Assistant</h3>
+        <button id="closeAssistant">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="assistant-body">
+        <p class="assistant-greeting">👋 أهلاً بك في Sky Assistant</p>
+        <p class="assistant-sub">اختر سؤالك من القائمة للحصول على الإجابة:</p>
+        
+        <!-- القائمة المنسدلة -->
+        <div class="assistant-dropdown">
+            <button class="assistant-dropdown-btn" id="dropdownBtn">
+                <span id="selectedQuestion">-- اختر سؤالك --</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <ul class="assistant-dropdown-menu" id="dropdownMenu">
+                <li data-value="q1">ما هي الخدمات التي تقدمها Sky Soft؟</li>
+                <li data-value="q2">هل توفرون دعماً فنياً؟</li>
+                <li data-value="q3">هل يمكن تخصيص الأنظمة؟</li>
+                <li data-value="q4">كيف يمكنني التواصل مع فريق الدعم الفني؟</li>
+                <li data-value="q5">هل يمكن ربط البرنامج بماكينة الكاشير؟</li>
+                <li data-value="q6">هل يمكن إصدار تقارير مالية مفصلة؟</li>
+                <li data-value="q7">هل الدعم الفني متاح طوال اليوم؟</li>
+                <li data-value="q8">هل يوجد دعم فني بعد شراء البرنامج؟</li>
+                <li data-value="q9">هل أحتاج إلى خبرة محاسبية لاستخدام البرنامج؟</li>
+                <li data-value="q10">هل البرنامج آمن على بياناتي؟</li>
+            </ul>
+        </div>
+
+        <div id="assistantAnswer" class="assistant-answer" style="display: none;">
+            <div class="answer-content">
+                <i class="fa-solid fa-circle-check"></i>
+                <p id="answerText"></p>
+            </div>
+        </div>
+
+        <div class="assistant-divider"></div>
+
+        <p class="assistant-contact-text">📞 لم تجد إجابة؟ تواصل معنا مباشرة:</p>
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft."
+           target="_blank"
+           class="assistant-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            تواصل عبر واتساب
+        </a>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 4. HEADER / NAVBAR -->
+<!-- ============================================ -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo-icon.png" alt="Sky Soft Logo">
+        </a>
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="Services.html">الخدمات</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="WhyUs.html">لماذا Sky Soft؟</a></li>
+            <li><a href="Testimonials.html">آراء العملاء</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في طلب استشارة بخصوص خدمات Sky Soft." 
+           target="_blank" 
+           class="btn">اطلب استشارة</a>
+    </nav>
+</header>
+
+<!-- ============================================ -->
+<!-- 5. PAGE CONTENT -->
+<!-- ============================================ -->
+
+<!-- Hero Section -->
+<section class="hero reveal">
+    <div class="hero-text">
+        <h1>حلول برمجية ذكية<br><span id="typing"></span></h1>
+        <p>
+            نقدم أنظمة محاسبية وإدارية متكاملة تساعد شركتك
+            على إدارة أعمالها بكفاءة وسهولة وأمان.
+        </p>
+        <div class="hero-buttons">
+            <a href="Services.html" class="btn-primary">خدماتنا</a>
+            <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في التواصل مع Sky Soft." 
+               target="_blank" 
+               class="btn-secondary">تواصل معنا</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="images/hero.jpg" alt="Sky Soft Hero">
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about reveal">
+    <div class="about-image">
+        <img src="images/about.jpg" alt="عن شركة Sky Soft">
+    </div>
+    <div class="about-content">
+        <span class="section-title">من نحن</span>
+        <h2>شريكك التقني نحو النجاح الرقمي</h2>
+        <p>
+            Sky Soft شركة متخصصة في تطوير الأنظمة المحاسبية والإدارية، تقدم حلولاً برمجية متكاملة تساعد الشركات والمؤسسات على تحسين الأداء، تنظيم العمليات، واتخاذ قرارات أكثر ذكاءً باستخدام أحدث التقنيات.
+        </p>
+        <ul class="about-list">
+            <li>✔ أنظمة محاسبية متكاملة</li>
+            <li>✔ حلول ERP و CRM</li>
+            <li>✔ دعم فني متخصص</li>
+            <li>✔ حماية وأمان للبيانات</li>
+        </ul>
+        <a href="about.html" class="btn-primary">اقرأ المزيد</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services reveal">
+    <div class="section-header">
+        <span class="section-title">خدماتنا</span>
+        <h2>حلول برمجية متكاملة لجميع احتياجات أعمالك</h2>
+        <p>
+            نقدم مجموعة واسعة من الخدمات والأنظمة الذكية لمساعدة الشركات
+            على النمو وتحقيق أعلى مستويات الكفاءة والإنتاجية.
+        </p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>الأنظمة المحاسبية</h3>
+            <p>برامج محاسبية دقيقة وسهلة لإدارة الحسابات والمالية.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+            <h3>أنظمة ERP</h3>
+            <p>إدارة جميع أقسام شركتك من خلال نظام موحد.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+            <h3>إدارة العملاء CRM</h3>
+            <p>متابعة العملاء وزيادة المبيعات وتحسين خدمة العملاء.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>أنظمة نقاط البيع POS</h3>
+            <p>حلول احترافية لإدارة الفروع والمبيعات بسهولة.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>الموارد البشرية HR</h3>
+            <p>إدارة الموظفين والحضور والمرتبات بكفاءة.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>الدعم الفني</h3>
+            <p>فريق متخصص لمساعدتك وحل المشكلات بسرعة.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="products reveal">
+    <div class="section-header">
+        <span class="section-title">منتجاتنا</span>
+        <h2>أنظمة ذكية لإدارة جميع أعمالك</h2>
+        <p>
+            نقدم مجموعة من الحلول البرمجية المتطورة التي تساعد الشركات على إدارة أعمالها
+            بكفاءة، مع واجهات سهلة الاستخدام وأعلى معايير الأمان.
+        </p>
+    </div>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="images/accounting.jpg" alt="برنامج المحاسبة">
+            <h3>برنامج المحاسبة</h3>
+            <p>إدارة الحسابات والفواتير والتقارير المالية بكل سهولة.</p>
+            <a href="products.html">اعرف المزيد ←</a>
+        </div>
+        <div class="product-card">
+            <img src="images/erp.jpg" alt="ERP">
+            <h3>نظام ERP</h3>
+            <p>إدارة جميع أقسام الشركة في منصة واحدة متكاملة.</p>
+            <a href="products.html">اعرف المزيد ←</a>
+        </div>
+        <div class="product-card">
+            <img src="images/pos.jpg" alt="POS">
+            <h3>نقاط البيع POS</h3>
+            <p>حلول متقدمة لإدارة المبيعات والفروع والمخازن.</p>
+            <a href="products.html">اعرف المزيد ←</a>
+        </div>
+        <div class="product-card">
+            <img src="images/hr.jpg" alt="HR">
+            <h3>الموارد البشرية</h3>
+            <p>إدارة الموظفين والحضور والانصراف والرواتب.</p>
+            <a href="products.html">اعرف المزيد ←</a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Us Section -->
+<section class="why reveal">
+    <div class="section-header">
+        <span class="section-title">لماذا Sky Soft؟</span>
+        <h2>لماذا يثق عملاؤنا بنا؟</h2>
+        <p>
+            نلتزم بتقديم حلول برمجية مبتكرة تجمع بين الجودة والأمان وسهولة الاستخدام، مع دعم فني مستمر لضمان نجاح أعمالك.
+        </p>
+    </div>
+    <div class="why-grid">
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-lock"></i></div>
+            <h3>أمان عالي</h3>
+            <p>حماية بياناتك باستخدام أحدث معايير وتقنيات الأمان.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>سرعة الأداء</h3>
+            <p>أنظمة سريعة ومستقرة لتوفير الوقت وزيادة الإنتاجية.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>الدعم الفني</h3>
+            <p>فريق متخصص لمساعدتك والإجابة عن استفساراتك.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>تطوير مستمر</h3>
+            <p>تحديثات دورية تضيف مزايا جديدة وتحسن الأداء.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>ثقة العملاء</h3>
+            <p>نبني علاقات طويلة الأمد قائمة على الجودة والالتزام.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>حلول مبتكرة</h3>
+            <p>نستخدم أحدث التقنيات لتطوير حلول تناسب احتياجاتك.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats reveal">
+    <div class="stat-card">
+        <h2 class="counter" data-target="15">0</h2>
+        <p>سنة من الخبرة</p>
+    </div>
+    <div class="stat-card">
+        <h2 class="counter" data-target="500">0</h2>
+        <p>عميل يثق بنا</p>
+    </div>
+    <div class="stat-card">
+        <h2 class="counter" data-target="2000">0</h2>
+        <p>مشروع مكتمل</p>
+    </div>
+    <div class="stat-card">
+        <h2 class="counter" data-target="24">0</h2>
+        <p>دعم فني على مدار الساعة</p>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta reveal" style="background: linear-gradient(135deg, #0b6ecf, #0a4a8f);">
+    <h2>ابدأ رحلة التحول الرقمي مع Sky Soft</h2>
+    <p>انضم إلى مئات العملاء الذين يعتمدون على حلولنا البرمجية لإدارة أعمالهم بكفاءة واحترافية.</p>
+    <div class="cta-buttons">
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في طلب استشارة مجانية بخصوص خدمات Sky Soft." 
+           target="_blank" 
+           class="btn-primary">اطلب استشارة مجانية</a>
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft."
+           class="btn-secondary"
+           target="_blank" style="border-color: #fff; color: #fff;">تواصل عبر واتساب</a>
+    </div>
+</section>
+
+<!-- Contact Preview -->
+<!-- Contact Preview - بدون بريد إلكتروني -->
+<section class="contact-preview reveal">
+    <div class="section-header">
+        <span class="section-title">تواصل معنا</span>
+        <h2>نحن هنا لمساعدتك</h2>
+        <p>تواصل معنا اليوم لمعرفة المزيد عن حلول Sky Soft، وسيقوم فريقنا بالرد عليك في أسرع وقت.</p>
+    </div>
+    
+    <div class="contact-preview-container">
+        <div class="contact-info">
+            <!-- الهاتف -->
+            <a href="tel:+201551888205" class="contact-item" style="text-decoration: none;">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h3>اتصل بنا</h3>
+                    <p dir="ltr">+20 155 188 8205</p>
+                </div>
+            </a>
+            
+            <!-- واتساب -->
+            <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft." target="_blank" class="contact-item" style="text-decoration: none;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                    <h3>واتساب</h3>
+                    <p dir="ltr">+20 155 188 8205</p>
+                </div>
+            </a>
+
+            <!-- العنوان (بدلاً من البريد الإلكتروني) -->
+            <div class="contact-item" style="cursor: default;">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h3>موقعنا</h3>
+                    <p>مصر - القاهرة - وسط البلد - التحرير</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.456789!2d31.2345!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e123456789%3A0x123456789abcdef!2z2YXYsdmD2LIg2KfZhNmF2YbYtCDYp9mE2YXYrdin2YbYqtiq2Kk!5e0!3m2!1sar!2seg!4v1700000000000" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FOOTER - بدون بريد إلكتروني -->
+<!-- ============================================ -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- العمود 1: الشعار ووصف الشركة -->
+        <div class="footer-col">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="images/logo-icon.png" alt="Sky Soft Logo" class="footer-logo">
+                <h3>Sky Soft</h3>
+            </a>
+            <p>شركة متخصصة في تطوير الحلول البرمجية والأنظمة المحاسبية والإدارية، نسعى إلى تقديم تقنيات حديثة تساعد الشركات على النمو والتحول الرقمي.</p>
+        </div>
+
+        <!-- العمود 2: روابط سريعة -->
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="Services.html">الخدمات</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="WhyUs.html">لماذا Sky Soft؟</a></li>
+                <li><a href="Testimonials.html">آراء العملاء</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+
+        <!-- العمود 3: معلومات التواصل (بدون بريد إلكتروني) -->
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <p><i class="fa-solid fa-phone"></i> <a href="tel:+201551888205" style="color: inherit; text-decoration: none;">+20 15 51888205</a></p>
+            <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft." target="_blank" style="color: inherit; text-decoration: none;">+20 15 51888205</a></p>
+            <p><i class="fa-solid fa-location-dot"></i> مصر - القاهرة - وسط البلد - التحرير</p>
+        </div>
+    </div>
+    <hr>
+    <div class="copyright">
+        © <span id="year"></span> Sky Soft. جميع الحقوق محفوظة.
+    </div>
+</footer>
+<!-- ============================================ -->
+<!-- 7. BACK TO TOP BUTTON -->
+<!-- ============================================ -->
+<button id="topBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ============================================ -->
+<!-- 8. TOAST -->
+<!-- ============================================ -->
+<div id="toast" class="toast"></div>
+
+<!-- ============================================ -->
+<!-- 9. JAVASCRIPT -->
+<!-- ============================================ -->
+<script src="js/main.js"></script>
+</body>
+</html>

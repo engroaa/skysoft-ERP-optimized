@@ -1,0 +1,723 @@
+/* ============================================
+   RESPONSIVE.CSS - نسخة نظيفة ومنسقة
+============================================ */
+
+/* ==========================
+   TABLET - 992px فأقل
+========================== */
+@media (max-width: 992px) {
+    /* ---- NAVBAR ---- */
+    .navbar {
+        padding: 14px 5%;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        font-size: 26px;
+        cursor: pointer;
+        color: var(--primary-color);
+        background: none;
+        border: none;
+        padding: 5px;
+    }
+
+    .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px 5%;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        gap: 5px;
+        border-radius: 0 0 20px 20px;
+        z-index: 999;
+        border-top: 3px solid var(--primary-color);
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        padding: 14px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 17px;
+        color: #333;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        color: var(--primary-color);
+        padding-right: 10px;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a.active {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .navbar .btn {
+        display: none !important;
+    }
+
+    .logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* ---- HERO ---- */
+    .hero {
+        flex-direction: column;
+        padding: 130px 5% 40px;
+        text-align: center;
+        min-height: auto;
+        gap: 30px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 380px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* ---- ABOUT ---- */
+    .about {
+        flex-direction: column;
+        padding: 60px 5%;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-list li {
+        justify-content: center;
+    }
+
+    /* ---- SERVICES / PRODUCTS / WHY ---- */
+    .services,
+    .products,
+    .why {
+        padding: 60px 5%;
+    }
+
+    .services-grid,
+    .products-grid,
+    .why-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    /* ---- CONTACT PREVIEW ---- */
+    .contact-preview {
+        padding: 60px 5%;
+    }
+
+    .contact-preview-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-map iframe {
+        min-height: 300px;
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn-primary,
+    .btn-secondary {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+
+    /* ---- SECTION HEADER ---- */
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+        padding: 50px 5% 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 30px;
+    }
+
+    /* ---- STATS ---- */
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 50px 5%;
+    }
+
+    .stat-card h2 {
+        font-size: 30px;
+    }
+
+    /* ---- PAGE HERO (الصفحات الداخلية) ---- */
+    .page-hero {
+        height: 280px;
+        margin-top: 72px;
+    }
+
+    .page-content h1 {
+        font-size: 36px;
+    }
+
+    .page-content p {
+        font-size: 18px;
+    }
+}
+
+/* ==========================
+   MOBILE - 768px فأقل
+========================== */
+@media (max-width: 768px) {
+    /* ---- NAVBAR ---- */
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    /* ---- HERO ---- */
+    .hero {
+        padding: 110px 4% 30px;
+        gap: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+
+    /* ---- ABOUT ---- */
+    .about {
+        padding: 40px 4%;
+        gap: 25px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-list li {
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    /* ---- SERVICES / PRODUCTS / WHY ---- */
+    .services-grid,
+    .products-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card,
+    .product-card,
+    .why-card {
+        padding: 25px 18px;
+    }
+
+    .product-card img {
+        height: 170px;
+    }
+
+    /* ---- SECTION HEADER ---- */
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+    }
+
+    /* ---- CONTACT PREVIEW ---- */
+    .contact-item {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .contact-item i {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .contact-item h3 {
+        font-size: 15px;
+    }
+
+    .contact-item p {
+        font-size: 13px;
+    }
+
+    .contact-map iframe {
+        min-height: 220px;
+    }
+
+    /* ---- PAGE HERO (الصفحات الداخلية) ---- */
+    .page-hero {
+        height: 220px;
+        margin-top: 65px;
+    }
+
+    .page-content h1 {
+        font-size: 28px;
+    }
+
+    .page-content p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+        padding: 40px 4% 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .footer-logo {
+        width: 50px;
+        margin: 0 auto 15px;
+        display: block;
+    }
+
+    .copyright {
+        font-size: 13px;
+        padding-top: 20px;
+    }
+
+    /* ---- STATS ---- */
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        padding: 40px 4%;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-card h2 {
+        font-size: 24px;
+    }
+
+    .stat-card p {
+        font-size: 14px;
+    }
+
+    /* ---- CTA ---- */
+    .cta {
+        padding: 50px 5%;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    .cta p {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+
+    /* ---- BACK TO TOP ---- */
+    #topBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        bottom: 18px;
+        right: 18px;
+    }
+
+    /* ---- TOAST ---- */
+    .toast {
+        padding: 10px 18px;
+        font-size: 14px;
+        bottom: 18px;
+        max-width: 90%;
+    }
+
+    /* ---- SKY ASSISTANT ---- */
+    .sky-assistant {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .assistant-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .assistant-popup {
+        bottom: 75px;
+        left: 15px;
+        right: 15px;
+        width: auto;
+        max-width: none;
+        border-radius: 16px;
+        max-height: 70vh;
+    }
+
+    .assistant-body {
+        padding: 16px;
+    }
+
+    .assistant-greeting {
+        font-size: 16px;
+    }
+
+    .assistant-sub {
+        font-size: 13px;
+    }
+
+    .assistant-dropdown-btn {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .assistant-dropdown-menu li {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .answer-content p {
+        font-size: 14px;
+    }
+
+    /* ---- SHAPES (إخفاء في الجوال) ---- */
+    .shape1,
+    .shape2,
+    .shape3 {
+        display: none;
+    }
+}
+
+/* ==========================
+   MOBILE SMALL - 480px فأقل
+========================== */
+@media (max-width: 480px) {
+    /* ---- NAVBAR ---- */
+    .navbar {
+        padding: 10px 3%;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .menu-toggle {
+        font-size: 22px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    /* ---- HERO ---- */
+    .hero {
+        padding: 100px 3% 25px;
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        max-width: 220px;
+    }
+
+    /* ---- ABOUT ---- */
+    .about-content h2 {
+        font-size: 20px;
+    }
+
+    .about-list li {
+        font-size: 14px;
+    }
+
+    /* ---- SECTION HEADER ---- */
+    .section-header h2 {
+        font-size: 20px;
+    }
+
+    .section-header p {
+        font-size: 14px;
+    }
+
+    /* ---- SERVICES / PRODUCTS / WHY ---- */
+    .service-card,
+    .product-card,
+    .why-card {
+        padding: 18px 14px;
+    }
+
+    .service-icon,
+    .why-icon {
+        font-size: 32px;
+    }
+
+    .service-card h3,
+    .product-card h3,
+    .why-card h3 {
+        font-size: 17px;
+    }
+
+    .service-card p,
+    .product-card p,
+    .why-card p {
+        font-size: 14px;
+    }
+
+    .product-card img {
+        height: 140px;
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* ---- PAGE HERO ---- */
+    .page-hero {
+        height: 180px;
+        margin-top: 58px;
+    }
+
+    .page-content h1 {
+        font-size: 22px;
+    }
+
+    .page-content p {
+        font-size: 14px;
+    }
+
+    /* ---- STATS ---- */
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 25px 3%;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-card h2 {
+        font-size: 20px;
+    }
+
+    .stat-card p {
+        font-size: 12px;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+        padding: 30px 3% 15px;
+    }
+
+    .footer-col h3 {
+        font-size: 16px;
+    }
+
+    .footer-col p,
+    .footer-col ul li,
+    .footer-col a {
+        font-size: 13px;
+    }
+
+    /* ---- CTA ---- */
+    .cta h2 {
+        font-size: 20px;
+    }
+
+    .cta p {
+        font-size: 14px;
+    }
+
+    /* ---- SKY ASSISTANT ---- */
+    .sky-assistant {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .assistant-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .assistant-popup {
+        bottom: 62px;
+        left: 10px;
+        right: 10px;
+        border-radius: 14px;
+    }
+
+    .assistant-body {
+        padding: 14px;
+    }
+
+    .assistant-greeting {
+        font-size: 15px;
+    }
+
+    .assistant-dropdown-btn {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .assistant-dropdown-menu li {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .answer-content p {
+        font-size: 13px;
+    }
+
+    /* ---- BACK TO TOP ---- */
+    #topBtn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        bottom: 14px;
+        right: 14px;
+    }
+}
+
+/* ==========================
+   TABLET LANDSCAPE - 768px إلى 992px
+========================== */
+@media (min-width: 769px) and (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .services-grid,
+    .products-grid,
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-preview-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

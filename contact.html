@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="تواصل مع Sky Soft للاستفسار عن خدماتنا وحلولنا البرمجية المتكاملة.">
+    <meta name="keywords" content="Sky Soft, تواصل, اتصل بنا, استفسار, برامج محاسبة, ERP, CRM">
+    <meta name="author" content="Sky Soft">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b6ecf">
+    <link rel="icon" href="favicon.ico">
+    <link rel="canonical" href="https://engroaa.github.io/skysoft-ERP/contact.html">
+
+    <meta property="og:title" content="Sky Soft | تواصل معنا">
+    <meta property="og:description" content="نحن هنا لمساعدتك. تواصل مع فريق Sky Soft.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://engroaa.github.io/skysoft-ERP/images/og-image.jpg">
+    <meta property="og:url" content="https://engroaa.github.io/skysoft-ERP/contact.html">
+    <meta property="og:locale" content="ar_EG">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="preload" href="favicon.ico" as="image">
+
+    <title>Sky Soft | تواصل معنا</title>
+</head>
+
+<body>
+
+<!-- ============================================ -->
+<!-- 1. LOADER -->
+<!-- ============================================ -->
+<div id="loader">
+    <div class="loader-container">
+        <div class="loader-logo">
+            <img src="images/logo-icon.png" alt="Sky Soft">
+        </div>
+        <h2 class="loader-title">Sky Soft</h2>
+        <div class="loader-bar-wrapper">
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+        <p class="loader-text">جاري التحميل...</p>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 2. PROGRESS BAR -->
+<!-- ============================================ -->
+<div id="progress-bar"></div>
+
+<!-- ============================================ -->
+<!-- 3. SKY ASSISTANT -->
+<!-- ============================================ -->
+<div class="sky-assistant">
+    <button class="assistant-btn" id="assistantBtn">
+        <i class="fa-solid fa-headset"></i>
+    </button>
+</div>
+
+<div class="assistant-popup" id="assistantPopup">
+    <div class="assistant-header">
+        <h3>🤖 Sky Assistant</h3>
+        <button id="closeAssistant">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="assistant-body">
+        <p class="assistant-greeting">👋 أهلاً بك في Sky Assistant</p>
+        <p class="assistant-sub">اختر سؤالك من القائمة للحصول على الإجابة:</p>
+        
+        <div class="assistant-dropdown">
+            <button class="assistant-dropdown-btn" id="dropdownBtn">
+                <span id="selectedQuestion">-- اختر سؤالك --</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <ul class="assistant-dropdown-menu" id="dropdownMenu">
+                <li data-value="q1">ما هي الخدمات التي تقدمها Sky Soft؟</li>
+                <li data-value="q2">هل توفرون دعماً فنياً؟</li>
+                <li data-value="q3">هل يمكن تخصيص الأنظمة؟</li>
+                <li data-value="q4">كيف يمكنني التواصل مع فريق الدعم الفني؟</li>
+                <li data-value="q5">هل يمكن ربط البرنامج بماكينة الكاشير؟</li>
+                <li data-value="q6">هل يمكن إصدار تقارير مالية مفصلة؟</li>
+                <li data-value="q7">هل الدعم الفني متاح طوال اليوم؟</li>
+                <li data-value="q8">هل يوجد دعم فني بعد شراء البرنامج؟</li>
+                <li data-value="q9">هل أحتاج إلى خبرة محاسبية لاستخدام البرنامج؟</li>
+                <li data-value="q10">هل البرنامج آمن على بياناتي؟</li>
+            </ul>
+        </div>
+
+        <div id="assistantAnswer" class="assistant-answer" style="display: none;">
+            <div class="answer-content">
+                <i class="fa-solid fa-circle-check"></i>
+                <p id="answerText"></p>
+            </div>
+        </div>
+
+        <div class="assistant-divider"></div>
+
+        <p class="assistant-contact-text">📞 لم تجد إجابة؟ تواصل معنا مباشرة:</p>
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft."
+           target="_blank"
+           class="assistant-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            تواصل عبر واتساب
+        </a>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 4. HEADER / NAVBAR -->
+<!-- ============================================ -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo-icon.png" alt="Sky Soft Logo">
+        </a>
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="Services.html">الخدمات</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="WhyUs.html">لماذا Sky Soft؟</a></li>
+            <li><a href="Testimonials.html">آراء العملاء</a></li>
+            <li><a href="contact.html" class="active">تواصل معنا</a></li>
+        </ul>
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في طلب استشارة بخصوص خدمات Sky Soft." 
+           target="_blank" 
+           class="btn">اطلب استشارة</a>
+    </nav>
+</header>
+
+<!-- ============================================ -->
+<!-- 5. PAGE CONTENT - صفحة التواصل -->
+<!-- ============================================ -->
+
+<!-- Hero Section -->
+<section class="page-hero">
+    <div class="page-overlay"></div>
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="page-content">
+        <h1>تواصل معنا</h1>
+        <p>نحن هنا لمساعدتك والرد على جميع استفساراتك</p>
+    </div>
+</section>
+
+<!-- Contact Cards -->
+<section class="contact-page reveal">
+    <div class="section-header">
+        <span class="section-title">تواصل معنا</span>
+        <h2>يسعدنا الرد على جميع استفساراتك</h2>
+        <p>اختر الطريقة المناسبة للتواصل معنا، وفريقنا سيكون سعيداً بمساعدتك</p>
+    </div>
+
+    <div class="contact-page-grid">
+        <!-- بطاقة الهاتف -->
+        <div class="contact-page-card">
+            <div class="contact-page-icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <h3>اتصل بنا</h3>
+            <p>متاحين للرد على مكالماتك</p>
+            <a href="tel:+201551888205" class="contact-page-link">
+                <i class="fa-solid fa-phone"></i>
+                +20 15 51888205
+            </a>
+        </div>
+
+        <!-- بطاقة واتساب -->
+        <div class="contact-page-card">
+            <div class="contact-page-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3>واتساب</h3>
+            <p>تواصل فوري عبر واتساب</p>
+            <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft." 
+               target="_blank" 
+               class="contact-page-link whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+                ابدأ المحادثة
+            </a>
+        </div>
+
+        <!-- بطاقة العنوان -->
+        <div class="contact-page-card">
+            <div class="contact-page-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3>العنوان</h3>
+            <p>وسط البلد - التحرير</p>
+            <p style="color: #888; font-size: 14px; margin-top: 5px;">
+                القاهرة، جمهورية مصر العربية
+            </p>
+            <a href="https://maps.google.com/?q=30.0444,31.2345" 
+               target="_blank" 
+               class="contact-page-link" 
+               style="margin-top: 10px;">
+                <i class="fa-solid fa-map-location-dot"></i>
+                عرض على الخريطة
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="contact-map-section reveal">
+    <div class="section-header">
+        <span class="section-title">موقعنا</span>
+        <h2>يمكنك زيارتنا</h2>
+    </div>
+    <div class="contact-map-wrapper">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.456789!2d31.2345!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e123456789%3A0x123456789abcdef!2z2YXYsdmD2LIg2KfZhNmF2YbYtCDYp9mE2YXYrdin2YbYqtiq2Kk!5e0!3m2!1sar!2seg!4v1700000000000" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta reveal">
+    <h2>هل لديك استفسار؟</h2>
+    <p>تواصل معنا الآن وسنقوم بالرد عليك في أسرع وقت</p>
+    <div class="cta-buttons">
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في طلب استشارة مجانية بخصوص خدمات Sky Soft." 
+           target="_blank" 
+           class="btn-primary">اطلب استشارة مجانية</a>
+        <a href="tel:+201551888205" class="btn-secondary">اتصل بنا</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 6. FOOTER - بدون بريد إلكتروني -->
+<!-- ============================================ -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="images/logo-icon.png" alt="Sky Soft Logo" class="footer-logo">
+                <h3>Sky Soft</h3>
+            </a>
+            <p>شركة متخصصة في تطوير الحلول البرمجية والأنظمة المحاسبية والإدارية، نسعى إلى تقديم تقنيات حديثة تساعد الشركات على النمو والتحول الرقمي.</p>
+        </div>
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="Services.html">الخدمات</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="WhyUs.html">لماذا Sky Soft؟</a></li>
+                <li><a href="Testimonials.html">آراء العملاء</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <p><i class="fa-solid fa-phone"></i> <a href="tel:+201551888205" style="color: inherit; text-decoration: none;">+20 15 51888205</a></p>
+            <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft." target="_blank" style="color: inherit; text-decoration: none;">+20 15 51888205</a></p>
+            <p><i class="fa-solid fa-location-dot"></i> مصر - القاهرة - وسط البلد - التحرير</p>
+        </div>
+    </div>
+    <hr>
+    <div class="copyright">
+        © <span id="year"></span> Sky Soft. جميع الحقوق محفوظة.
+    </div>
+</footer>
+
+<!-- ============================================ -->
+<!-- 7. BACK TO TOP BUTTON -->
+<!-- ============================================ -->
+<button id="topBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ============================================ -->
+<!-- 8. TOAST -->
+<!-- ============================================ -->
+<div id="toast" class="toast"></div>
+
+<!-- ============================================ -->
+<!-- 9. JAVASCRIPT -->
+<!-- ============================================ -->
+<script src="js/main.js"></script>
+</body>
+</html>

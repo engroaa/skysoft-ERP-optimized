@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Tags -->
+    <title>منتجاتنا | Sky Soft</title>
+    <meta name="description" content="استكشف مجموعة منتجات Sky Soft من أنظمة ERP و POS و HR وحلول إدارة محلات الذهب والتقسيط.">
+    <meta name="keywords" content="Sky ERP, Sky POS, Sky HR, Sky Gold, أنظمة محاسبية, برامج إدارة">
+    <meta name="author" content="Sky Soft">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b6ecf">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="منتجاتنا | Sky Soft">
+    <meta property="og:description" content="استكشف مجموعة منتجات Sky Soft من أنظمة ERP و POS و HR وحلول إدارة محلات الذهب والتقسيط.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://engroaa.github.io/skysoft-ERP/images/og-image.jpg">
+    <meta property="og:url" content="https://engroaa.github.io/skysoft-ERP/products.html">
+    <meta property="og:locale" content="ar_EG">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://engroaa.github.io/skysoft-ERP/products.html">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="favicon.ico" as="image">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+ <!-- ============================================ -->
+<!-- 1. LOADER - نسخة محدثة -->
+<!-- ============================================ -->
+<div id="loader">
+    <div class="loader-container">
+        <div class="loader-logo">
+            <img src="images/logo-icon.png" alt="Sky Soft">
+        </div>
+        <h2 class="loader-title">Sky Soft</h2>
+        <div class="loader-bar-wrapper">
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+        <p class="loader-text">جاري التحميل...</p>
+    </div>
+</div>
+
+    <!-- 2. ✅ Scroll Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- ============================================ -->
+<!-- 3. SKY ASSISTANT (البوت التفاعلي) -->
+<!-- ============================================ -->
+<div class="sky-assistant">
+    <button class="assistant-btn" id="assistantBtn">
+        <i class="fa-solid fa-headset"></i>
+    </button>
+</div>
+
+<div class="assistant-popup" id="assistantPopup">
+    <div class="assistant-header">
+        <h3>🤖 Sky Assistant</h3>
+        <button id="closeAssistant">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="assistant-body">
+        <p class="assistant-greeting">👋 أهلاً بك في Sky Assistant</p>
+        <p class="assistant-sub">اختر سؤالك من القائمة للحصول على الإجابة:</p>
+        
+        <!-- القائمة المنسدلة -->
+        <div class="assistant-dropdown">
+            <button class="assistant-dropdown-btn" id="dropdownBtn">
+                <span id="selectedQuestion">-- اختر سؤالك --</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <ul class="assistant-dropdown-menu" id="dropdownMenu">
+                <li data-value="q1">ما هي الخدمات التي تقدمها Sky Soft؟</li>
+                <li data-value="q2">هل توفرون دعماً فنياً؟</li>
+                <li data-value="q3">هل يمكن تخصيص الأنظمة؟</li>
+                <li data-value="q4">كيف يمكنني التواصل مع فريق الدعم الفني؟</li>
+                <li data-value="q5">هل يمكن ربط البرنامج بماكينة الكاشير؟</li>
+                <li data-value="q6">هل يمكن إصدار تقارير مالية مفصلة؟</li>
+                <li data-value="q7">هل الدعم الفني متاح طوال اليوم؟</li>
+                <li data-value="q8">هل يوجد دعم فني بعد شراء البرنامج؟</li>
+                <li data-value="q9">هل أحتاج إلى خبرة محاسبية لاستخدام البرنامج؟</li>
+                <li data-value="q10">هل البرنامج آمن على بياناتي؟</li>
+            </ul>
+        </div>
+
+        <div id="assistantAnswer" class="assistant-answer" style="display: none;">
+            <div class="answer-content">
+                <i class="fa-solid fa-circle-check"></i>
+                <p id="answerText"></p>
+            </div>
+        </div>
+
+        <div class="assistant-divider"></div>
+
+        <p class="assistant-contact-text">📞 لم تجد إجابة؟ تواصل معنا مباشرة:</p>
+        <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft."
+           target="_blank"
+           class="assistant-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            تواصل عبر واتساب
+        </a>
+    </div>
+</div>
+
+
+    <!-- 4. ✅ Header (Navbar) -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo-icon.png" alt="Sky Soft Logo">
+                <span>Sky Soft</span>
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="Services.html">الخدمات</a></li>
+                <li><a href="products.html" class="active">المنتجات</a></li>
+                <li><a href="WhyUs.html">لماذا Sky Soft؟</a></li>
+                <li><a href="Testimonials.html">آراء العملاء</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في طلب استشارة بخصوص منتجات Sky Soft." 
+               target="_blank" 
+               class="btn">اطلب استشارة</a>
+        </nav>
+    </header>
+
+    <!-- ======================================================
+         5. ⬇️ مـحـتـوى الـصـفـحـة ⬇️
+    ======================================================= -->
+    
+    <main style="padding-top: 100px;">
+        
+        <!-- Hero Section for Products -->
+        <section class="page-hero">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <div class="page-overlay"></div>
+            <div class="page-content">
+                <h1>منتجاتنا</h1>
+                <p>حلول برمجية متكاملة صُممت خصيصاً لتلبية احتياجات أعمالك وتطويرها بذكاء.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span><i class="fa-solid fa-angle-left"></i></span>
+                    <span>المنتجات</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid Section -->
+        <section class="products reveal" style="padding: 80px 8%;">
+            <div class="section-header">
+                <span class="section-title">قائمة المنتجات</span>
+                <h2>حلولنا التقنية الرائدة</h2>
+                <p>نقدم مجموعة متنوعة من الأنظمة الذكية التي تغطي كافة جوانب إدارة الشركات والمحلات.</p>
+            </div>
+
+            <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+                
+                <!-- Sky ERP -->
+                <div class="product-card" style="background: #fff; border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); border: 1px solid #eee;">
+                    <div class="product-image" style="height: 220px; overflow: hidden; position: relative;">
+                        <img src="images/erp-photo.jpg" alt="Sky ERP" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;">
+                        <div style="position: absolute; top: 15px; right: 15px; background: var(--primary-color); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">الأكثر مبيعاً</div>
+                    </div>
+                    <div class="product-content" style="padding: 30px;">
+                        <h3 style="color: var(--primary-color); font-size: 24px; margin-bottom: 15px;">Sky ERP</h3>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">نظام متكامل لإدارة الحسابات والمبيعات والمشتريات والمخازن والموارد المالية بكل سهولة ودقة.</p>
+                        <ul style="margin-bottom: 25px;">
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> إدارة الحسابات</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> تقارير لحظية</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> ربط جميع الأقسام</li>
+                        </ul>
+                        <a href="https://wa.me/201551888205?text=أرغب في معرفة المزيد عن نظام Sky ERP" target="_blank" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px;">تفاصيل المنتج</a>
+                    </div>
+                </div>
+
+                <!-- Sky POS -->
+                <div class="product-card" style="background: #fff; border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); border: 1px solid #eee;">
+                    <div class="product-image" style="height: 220px; overflow: hidden;">
+                        <img src="images/pos-photo.jpg" alt="Sky POS" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="product-content" style="padding: 30px;">
+                        <h3 style="color: var(--primary-color); font-size: 24px; margin-bottom: 15px;">Sky POS</h3>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">حل متكامل لإدارة نقاط البيع والكاشير، مصمم للسرعة والكفاءة في التعامل مع الفواتير والمخزون.</p>
+                        <ul style="margin-bottom: 25px;">
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> دعم الباركود</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> إدارة الفواتير</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> ربط الفروع</li>
+                        </ul>
+                        <a href="https://wa.me/201551888205?text=أرغب في معرفة المزيد عن نظام Sky POS" target="_blank" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px;">تفاصيل المنتج</a>
+                    </div>
+                </div>
+
+                <!-- Sky HR -->
+                <div class="product-card" style="background: #fff; border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); border: 1px solid #eee;">
+                    <div class="product-image" style="height: 220px; overflow: hidden;">
+                        <img src="images/hr-photo.jpg" alt="Sky HR" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="product-content" style="padding: 30px;">
+                        <h3 style="color: var(--primary-color); font-size: 24px; margin-bottom: 15px;">Sky HR</h3>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">نظام متكامل لإدارة الموارد البشرية يشمل الحضور والانصراف، الإجازات، والرواتب في منصة واحدة.</p>
+                        <ul style="margin-bottom: 25px;">
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> إدارة الموظفين</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> الحضور والانصراف</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> الرواتب والإجازات</li>
+                        </ul>
+                        <a href="https://wa.me/201551888205?text=أرغب في معرفة المزيد عن نظام Sky HR" target="_blank" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px;">تفاصيل المنتج</a>
+                    </div>
+                </div>
+
+                <!-- Sky Gold -->
+                <div class="product-card" style="background: #fff; border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); border: 1px solid #eee;">
+                    <div class="product-image" style="height: 220px; overflow: hidden;">
+                        <img src="images/gold.jpg" alt="Sky Gold" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="product-content" style="padding: 30px;">
+                        <h3 style="color: var(--primary-color); font-size: 24px; margin-bottom: 15px;">Sky Gold</h3>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">نظام متخصص لإدارة محلات الذهب والمجوهرات مع متابعة الأعيرة والأوزان وحركة البيع والشراء بدقة.</p>
+                        <ul style="margin-bottom: 25px;">
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> إدارة الأعيرة</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> متابعة الأوزان</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> تقارير الأرباح</li>
+                        </ul>
+                        <a href="https://wa.me/201551888205?text=أرغب في معرفة المزيد عن نظام Sky Gold" target="_blank" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px;">تفاصيل المنتج</a>
+                    </div>
+                </div>
+
+                <!-- Sky Supply -->
+                <div class="product-card" style="background: #fff; border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); border: 1px solid #eee;">
+                    <div class="product-image" style="height: 220px; overflow: hidden;">
+                        <img src="images/supply.jpg" alt="Sky Supply" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="product-content" style="padding: 30px;">
+                        <h3 style="color: var(--primary-color); font-size: 24px; margin-bottom: 15px;">Sky Supply</h3>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">نظام لإدارة التوريدات والتحصيل يساعد على متابعة الموردين والعملاء وحركة المدفوعات بسهولة.</p>
+                        <ul style="margin-bottom: 25px;">
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> إدارة الموردين</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> متابعة التحصيل</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> تقارير مالية</li>
+                        </ul>
+                        <a href="https://wa.me/201551888205?text=أرغب في معرفة المزيد عن نظام Sky Supply" target="_blank" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px;">تفاصيل المنتج</a>
+                    </div>
+                </div>
+
+                <!-- Sky Installments -->
+                <div class="product-card" style="background: #fff; border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); border: 1px solid #eee;">
+                    <div class="product-image" style="height: 220px; overflow: hidden;">
+                        <img src="images/installments.jpg" alt="Sky Installments" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="product-content" style="padding: 30px;">
+                        <h3 style="color: var(--primary-color); font-size: 24px; margin-bottom: 15px;">Sky Installments</h3>
+                        <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">نظام لإدارة عمليات التقسيط وجدولة الأقساط ومتابعة مواعيد السداد والتنبيهات الخاصة بالعملاء.</p>
+                        <ul style="margin-bottom: 25px;">
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> إدارة الأقساط</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> تنبيهات السداد</li>
+                            <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: #444;"><i class="fa-solid fa-check-circle" style="color: var(--primary-color);"></i> تقارير العملاء</li>
+                        </ul>
+                        <a href="https://wa.me/201551888205?text=أرغب في معرفة المزيد عن نظام Sky Installments" target="_blank" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px;">تفاصيل المنتج</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta reveal" style="padding: 80px 8%; background: var(--primary-color); color: #fff; text-align: center; border-radius: 50px; margin: 0 8% 80px;">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">هل تبحث عن حل مخصص لشركتك؟</h2>
+            <p style="font-size: 18px; margin-bottom: 35px; opacity: 0.9;">فريقنا جاهز لتطوير حلول برمجية تناسب احتياجاتك الفريدة.</p>
+            <a href="https://wa.me/201551888205?text=أرغب في طلب استشارة لتطوير نظام مخصص" target="_blank" class="btn-secondary" style="background: #fff; color: var(--primary-color); border: none; padding: 15px 40px;">تواصل معنا الآن</a>
+        </section>
+
+    </main>
+
+    <!-- ======================================================
+         6. ⬆️ نـهـايـة مـحـتـوى الـصـفـحـة ⬆️
+    ======================================================= -->
+
+    <!-- 7. ✅ Back To Top Button -->
+    <button id="topBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- 8. ✅ Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+<!-- ============================================ -->
+<!-- FOOTER - بدون بريد إلكتروني -->
+<!-- ============================================ -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- العمود 1: الشعار ووصف الشركة -->
+        <div class="footer-col">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="images/logo-icon.png" alt="Sky Soft Logo" class="footer-logo">
+                <h3>Sky Soft</h3>
+            </a>
+            <p>شركة متخصصة في تطوير الحلول البرمجية والأنظمة المحاسبية والإدارية، نسعى إلى تقديم تقنيات حديثة تساعد الشركات على النمو والتحول الرقمي.</p>
+        </div>
+
+        <!-- العمود 2: روابط سريعة -->
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="Services.html">الخدمات</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="WhyUs.html">لماذا Sky Soft؟</a></li>
+                <li><a href="Testimonials.html">آراء العملاء</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+
+        <!-- العمود 3: معلومات التواصل (بدون بريد إلكتروني) -->
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <p><i class="fa-solid fa-phone"></i> <a href="tel:+201551888205" style="color: inherit; text-decoration: none;">+20 15 51888205</a></p>
+            <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/201551888205?text=السلام عليكم، أرغب في الاستفسار عن خدمات Sky Soft." target="_blank" style="color: inherit; text-decoration: none;">+20 15 51888205</a></p>
+            <p><i class="fa-solid fa-location-dot"></i> مصر - القاهرة - وسط البلد - التحرير</p>
+        </div>
+    </div>
+    <hr>
+    <div class="copyright">
+        © <span id="year"></span> Sky Soft. جميع الحقوق محفوظة.
+    </div>
+</footer>
+
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

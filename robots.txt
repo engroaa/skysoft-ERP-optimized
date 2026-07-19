@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://engroaa.github.io/skysoft-ERP/sitemap.xml
